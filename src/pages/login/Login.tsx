@@ -36,7 +36,7 @@ function Login() {
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
+            <div className="bg-[#FCF5ED] grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold text-[#1F1717]">
                 <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
                     <h2 className="text-slate-900 text-5xl ">Entrar</h2>
                     <div className="flex flex-col w-full">
@@ -45,7 +45,7 @@ function Login() {
                             type="text"
                             id="usuario"
                             name="usuario"
-                            placeholder="Usuario"
+                            placeholder="Usuário"
                             className="border-2 border-slate-700 rounded p-2"
                             value={usuarioLogin.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -65,8 +65,8 @@ function Login() {
                     </div>
                     <button
                         type='submit'
-                        className="rounded bg-pink-600 flex justify-center
-                                   hover:bg-yellow-500 text-white w-1/2 py-2">
+                        className="rounded bg-[#1F1717] flex justify-center
+                                   hover:bg-[#553F3F] text-white w-1/2 py-2">
                         {isLoading ? <RotatingLines
                             strokeColor="white"
                             strokeWidth="5"
@@ -77,11 +77,10 @@ function Login() {
                             <span>Entrar</span>}
                     </button>
 
-                    <hr className="border-slate-800 w-full" />
-
+                    <hr className="bg-[#902E39] border-slate-800 w-full" />
                     <p>
                         Ainda não tem uma conta?{' '}
-                        <Link to="/cadastro" className="text-yellow-500 hover:underline">
+                        <Link to="/cadastro" className="text-[#F4C943] hover:underline">
                             Cadastre-se
                         </Link>
                     </p>

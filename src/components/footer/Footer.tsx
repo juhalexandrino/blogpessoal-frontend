@@ -1,4 +1,5 @@
-import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { Link } from "react-router-dom";
+import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react';
 
 function Footer() {
 
@@ -6,16 +7,15 @@ function Footer() {
 
     return (
         <>
-            <div className="flex justify-center bg-pink-600 text-white">
+            <div className="flex justify-center bg-[#CE5A67] text-white">
                 <div className="container flex flex-col items-center py-4">
                     <p className='text-xl font-bold'>
-                            Blog Pessoal Generation | Copyright {data}
-                        </p>
-                    <p className='text-lg'>Acesse nossas redes sociais:</p>
+                        Escritos Virtuais | Copyright {data}
+                    </p>
+                    <p className='text-lg'>Acesse minhas redes sociais:</p>
                     <div className='flex gap-2'>
-                        <LinkedinLogo size={42} weight='bold' />
-                        <InstagramLogo size={42} weight='bold' />
-                        <FacebookLogo size={42} weight='bold' />
+                    <Link to='https://github.com/juhalexandrino' target="_blank" title="GitHub" className='hover:opacity-70'><GithubLogo size={27} /></Link>
+                    <Link to='https://github.com/julia-alexandrino' target="_blank" title="LinkendIn" className='hover:opacity-70'><LinkedinLogo size={27} /></Link>
                     </div>
                 </div>
             </div>
