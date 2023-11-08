@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-//import { PropagateLoader } from 'react-loader-spinner';
+import { PropagateLoader } from 'react-spinners';
 
 import { buscar } from '../../../services/Service';
 import { AuthContext } from '../../../contexts/AuthContext';
 
 import Tema from '../../../models/Tema';
 import CardTemas from '../cardTemas/CadTemas';
-import { PropagateLoader } from 'react-spinners';
+
 
 function ListaTemas() {
 

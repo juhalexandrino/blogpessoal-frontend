@@ -66,7 +66,7 @@ function Login() {
                     <button
                         type='submit'
                         className="rounded bg-[#1F1717] flex justify-center
-                                   hover:bg-[#553F3F] text-white w-1/2 py-2">
+                                   hover:bg-        text-white w-1/2 py-2">
                         {isLoading ? <RotatingLines
                             strokeColor="white"
                             strokeWidth="5"

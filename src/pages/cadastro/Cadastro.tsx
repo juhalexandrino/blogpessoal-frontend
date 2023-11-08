@@ -87,19 +87,19 @@ function Cadastro() {
                         />
                     </div>
                     <div className="flex flex-col w-full">
-                        <label htmlFor="usuario">Usuario</label>
+                        <label htmlFor="usuario">Usuário (endereço de e-mail)</label>
                         <input
                             type="text"
                             id="usuario"
                             name="usuario"
-                            placeholder="Usuario"
+                            placeholder="Usuário"
                             className="border-2 border-slate-700 rounded p-2"
                             value={usuario.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         />
                     </div>
                     <div className="flex flex-col w-full">
-                        <label htmlFor="foto">Foto</label>
+                        <label htmlFor="foto">Foto de perfil</label>
                         <input
                             type="text"
                             id="foto"
@@ -123,12 +123,12 @@ function Cadastro() {
                         />
                     </div>
                     <div className="flex flex-col w-full">
-                        <label htmlFor="confirmarSenha">Confirmar Senha</label>
+                        <label htmlFor="confirmarSenha">Confirmar senha</label>
                         <input
                             type="password"
                             id="confirmarSenha"
                             name="confirmarSenha"
-                            placeholder="Confirmar Senha"
+                            placeholder="Confirmar senha"
                             className="border-2 border-slate-700 rounded p-2"
                             value={confirmaSenha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
@@ -136,12 +136,12 @@ function Cadastro() {
                     </div>
                     <div className="flex justify-around w-full gap-8">
                         <button
-                            className='rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2'
+                            className='rounded text-white bg-[#EB9694] hover:bg-[#EA7E7C] w-1/2 py-2'
                             onClick={retornar}>
                             Cancelar
                         </button>
                         <button
-                            className='rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 
+                            className='rounded text-white bg-[#EEC5A6] hover:bg-[#E4A676] w-1/2 
                                        py-2 flex justify-center'
                             type='submit'>
                             {isLoading ? <RotatingLines

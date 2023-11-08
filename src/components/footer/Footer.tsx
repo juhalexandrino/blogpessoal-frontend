@@ -15,7 +15,7 @@ function Footer() {
                     <p className='text-lg'>Acesse minhas redes sociais:</p>
                     <div className='flex gap-2'>
                     <Link to='https://github.com/juhalexandrino' target="_blank" title="GitHub" className='hover:opacity-70'><GithubLogo size={27} /></Link>
-                    <Link to='https://github.com/julia-alexandrino' target="_blank" title="LinkendIn" className='hover:opacity-70'><LinkedinLogo size={27} /></Link>
+                    <Link to='https://www.linkedin.com/in/juliaalexandrino/' target="_blank" title="LinkendIn" className='hover:opacity-70'><LinkedinLogo size={27} /></Link>
                     </div>
                 </div>
             </div>

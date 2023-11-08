@@ -23,7 +23,7 @@ function Navbar() {
                     <Link to='/home' className='text-2xl font-bold'>Escritos Virtuais</Link>
 
                     <div className='flex gap-4'>
-                        <Link to='/temas' className='hover:underline' title="Postagens"><PencilSimpleLine size={27} /></Link>
+                        <Link to='/postagens' className='hover:underline' title="Postagens"><PencilSimpleLine size={27} /></Link>
                         <Link to='/temas' className='hover:underline' title="Temas"><Cards size={27} /></Link>
                         <Link to='/cadastroTema' className='hover:underline' title="Novo Tema"><Plus size={27} /></Link>
                         <Link to='/' className='hover:underline' title="Usuário"><User size={27} /></Link>
