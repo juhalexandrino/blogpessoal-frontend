@@ -6,6 +6,7 @@ import { buscar, deletar } from '../../../services/Service'
 import { AuthContext } from '../../../contexts/AuthContext'
 
 import Postagem from '../../../models/Postagem'
+import { toastAlerta } from '../../../utils/toastAlerta'
 
 function DeletarPostagem() {
     
@@ -28,7 +29,7 @@ function DeletarPostagem() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('Token expirado. Por favor, faça login novamente!')
+                toastAlerta('Token expirado. Por favor, faça login novamente!', "info")
                 handleLogout()
             }
         }
@@ -36,7 +37,7 @@ function DeletarPostagem() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado para utilizar essa funcionalidade.')
+            toastAlerta('Você precisa estar logado para utilizar essa funcionalidade.', "info")
             navigate('/login')
         }
     }, [token])
@@ -57,10 +58,10 @@ function DeletarPostagem() {
                 }
             })
 
-            alert('Postagem apagada com sucesso!')
+            toastAlerta('Postagem apagada com sucesso!', "sucesso")
 
         } catch (error) {
-            alert('Erro ao apagar postagem. Tente novamente!')
+            toastAlerta('Erro ao apagar postagem. Tente novamente!', "erro")
         }
 
         setIsLoading(false)

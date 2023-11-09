@@ -7,6 +7,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 
 import Tema from '../../../models/Tema';
 import CardTemas from '../cardTemas/CadTemas';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 
 function ListaTemas() {
@@ -25,7 +26,7 @@ function ListaTemas() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('Token expirado. Por favor, faça login novamente!')
+                toastAlerta('Token expirado. Por favor, faça login novamente!', "info")
                 handleLogout()
             }
         }
@@ -33,7 +34,7 @@ function ListaTemas() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado para utilizar essa funcionalidade.');
+            toastAlerta('Você precisa estar logado para utilizar essa funcionalidade.', "info");
             navigate('/login');
         }
     }, [token])

@@ -6,6 +6,7 @@ import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import { AuthContext } from "../../../contexts/AuthContext";
 
 import Tema from "../../../models/Tema";
+import { toastAlerta } from "../../../utils/toastAlerta";
 
 function FormularioTema() {
 
@@ -28,7 +29,7 @@ function FormularioTema() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token expirou. Por favor, faça login novamente.')
+                toastAlerta('O token expirou. Por favor, faça login novamente.', "info")
                 handleLogout()
             }
         }
@@ -36,7 +37,7 @@ function FormularioTema() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado para utilizar essa funcionalidade.');
+            toastAlerta('Você precisa estar logado para utilizar essa funcionalidade.', "info");
             navigate('/login');
         }
     }, [token]);
@@ -66,14 +67,14 @@ function FormularioTema() {
                     }
                 })
 
-                alert('Tema atualizado com sucesso!')
+                toastAlerta('Tema atualizado com sucesso!', "sucesso")
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('Token expirado. Por favor, faça login novamente.')
+                    toastAlerta('Token expirado. Por favor, faça login novamente.', "info")
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar o tema. Tente novamente!')
+                    toastAlerta('Erro ao atualizar o tema. Tente novamente!', "erro")
                 }
             }
 
@@ -85,14 +86,14 @@ function FormularioTema() {
                     }
                 })
 
-                alert('Tema criado com sucesso!')
+                toastAlerta('Tema criado com sucesso!', "sucesso")
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('Token expirado. Por favor, faça login novamente.')
+                    toastAlerta('Token expirado. Por favor, faça login novamente.', "info")
                     handleLogout()
                 } else {
-                    alert('Erro ao criar o tema. Tente novamente!')
+                    toastAlerta('Erro ao criar o tema. Tente novamente!', "erro")
                 }
             }
         }

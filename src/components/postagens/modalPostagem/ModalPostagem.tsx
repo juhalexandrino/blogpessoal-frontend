@@ -10,8 +10,8 @@ function ModalPostagem() {
             <Popup
                 trigger={
                     <button 
-                        className='border rounded px-4 py-2 hover:bg-white hover:text-indigo-800'>
-                        Nova Postagem
+                        className='rounded text-[#1F1717] hover:text-[#8A6B6B] border-[#1F1717] hover:border-[#8A6B6B]  border-solid border-2 py-2 px-4'>
+                        Nova postagem
                     </button>
                 }
                 modal

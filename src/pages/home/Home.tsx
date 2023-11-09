@@ -11,23 +11,21 @@ function Home() {
                             Boas vindas!
                         </h2>
                         <p className='text-xl'>
-                            Deixe suas reflexões e visões pessoais. 
+                            Deixe aqui suas reflexões e visões pessoais: 
                         </p>
 
                         <div className="flex justify-around gap-4">
-                            <div className='rounded text-[#1F1717] border-[#1F1717] border-solid border-2 py-2 px-4'>
                             <ModalPostagem />
-                            </div>
                         </div>
                     </div>
 
                     <div className="flex justify-center ">
                         <img
-                            src="https://cdni.iconscout.com/illustration/premium/thumb/female-web-developer-working-on-project-5691620-4759502.png"
-                            alt="Imagem Página Home"
+                            src="https://i.imgur.com/84Cbtmh.png"
+                            alt="Imagem página Home. Imagem por Tailor Brands."
                             className='w-2/3'
                         />
-                    </div>
+                    </div> 
                 </div>
             </div>
 

@@ -7,6 +7,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 
 import Tema from '../../../models/Tema';
 import Postagem from '../../../models/Postagem';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 function FormularioPostagem() {
 
@@ -49,7 +50,7 @@ function FormularioPostagem() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado para utilizar essa funcionalidade.');
+            toastAlerta('Você precisa estar logado para utilizar essa funcionalidade.', "info");
             navigate('/');
         }
     }, [token])
@@ -94,14 +95,14 @@ function FormularioPostagem() {
                     },
                 });
 
-                alert('Postagem atualizada com sucesso!')
+                toastAlerta('Postagem atualizada com sucesso!', "sucesso")
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('Token expirado. Por favor, faça login novamente!')
+                    toastAlerta('Token expirado. Por favor, faça login novamente!', "info")
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar postagem. Tente novamente!')
+                    toastAlerta('Erro ao atualizar postagem. Tente novamente!', "erro")
                 }
             }
 
@@ -113,14 +114,14 @@ function FormularioPostagem() {
                     },
                 })
 
-                alert('Postagem cadastrada com sucesso!');
+                toastAlerta('Postagem cadastrada com sucesso!', "sucesso");
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('Token expirado. Por favor, faça login novamente!')
+                    toastAlerta('Token expirado. Por favor, faça login novamente!', "info")
                     handleLogout()
                 } else {
-                    alert('Erro ao criar postagem. Tente novamente!');
+                    toastAlerta('Erro ao criar postagem. Tente novamente!', "erro");
                 }
             }
         }
