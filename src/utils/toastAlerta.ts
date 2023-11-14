@@ -6,12 +6,12 @@ export function toastAlerta(mensagem: string, tipo: string) {
         case 'sucesso':
             toast.success(mensagem, {
                 position: 'top-right',
-                autoClose: 2000,
-                hideProgressBar: false,
+                autoClose: 5000,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: 'colored',
+                theme: 'light',
                 progress: undefined,
             });
             break;
@@ -19,12 +19,12 @@ export function toastAlerta(mensagem: string, tipo: string) {
         case 'info':
             toast.info(mensagem, {
                 position: 'top-right',
-                autoClose: 2000,
-                hideProgressBar: false,
+                autoClose: 5000,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: 'colored',
+                theme: 'light',
                 progress: undefined,
             });
             break;
@@ -32,12 +32,12 @@ export function toastAlerta(mensagem: string, tipo: string) {
         case 'erro':
             toast.error(mensagem, {
                 position: 'top-right',
-                autoClose: 2000,
-                hideProgressBar: false,
+                autoClose: 5000,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: 'colored',
+                theme: 'light',
                 progress: undefined,
             });
             break;
@@ -45,12 +45,12 @@ export function toastAlerta(mensagem: string, tipo: string) {
         default:
             toast.info(mensagem, {
                 position: 'top-right',
-                autoClose: 2000,
-                hideProgressBar: false,
+                autoClose: 5000,
+                hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: 'colored',
+                theme: 'light',
                 progress: undefined,
             });
             break;

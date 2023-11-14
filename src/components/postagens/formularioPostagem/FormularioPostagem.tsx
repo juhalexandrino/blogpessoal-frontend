@@ -181,7 +181,7 @@ function FormularioPostagem() {
         <button
             type='submit'
             disabled={carregandoTema}
-            className='flex justify-center rounded disabled:bg-slate-200 bg-[#473434]
+            className='flex justify-center rounded disabled:bg-[#67523A] bg-[#473434]
                     hover:bg-[#1F1717] text-white font-bold w-1/2 mx-auto py-2'
         >
             {isLoading ?
